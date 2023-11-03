@@ -1,3 +1,5 @@
+// --- Ways of declaring variables and their particularities ---
+
 // VAR - declared in global scope and can be redeclared and reassigned (avoid using)
 var pi = 3.14
 console.log(pi)
@@ -17,7 +19,6 @@ console.log(piConst);
 (function() {
     variavelGlobal = 3.14
 })();
-
 console.log(variavelGlobal);
 
 // valid identifiers
