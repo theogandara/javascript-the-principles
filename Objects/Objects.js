@@ -57,3 +57,12 @@ const elixir = {
 console.log(javascript)
 // the paradigm property won't be present in the log, because it doesn't belong to the prototype of the objects it was inherited from, but if we try to access this property it will be there.
 console.log(javascript.paradigm)
+
+// other ways to do this
+const tgLanguage = {
+    creator: "theo language"
+}
+Object.setPrototypeOf(tgLanguage, functionalLanguage)
+console.log(Object.getPrototypeOf(tgLanguage))
+// likewise, it happens here, the property is of your prototype and not directly yours
+console.log(tgLanguage.hasOwnProperty("paradigm"))
