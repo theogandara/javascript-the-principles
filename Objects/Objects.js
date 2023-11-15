@@ -106,7 +106,7 @@ const definePropertiesConfigs = {
     configurable: "property can be deleted",
     enumerable: "property can be enumerated",
     writable: "property can be modified",
-    value: "obviosly define the property value"
+    value: "obviously define the property value"
 }
 console.table(definePropertiesConfigs)
 // enuerate now
@@ -115,3 +115,18 @@ Object.defineProperty(example, "age", {
     enumerable: true
 })
 console.log(example)
+
+// object - preventExtensions, seal, freeze
+const descriptionPrevExtSealFreeze = {
+    preventExt: "prevents it from having new properties, but we can modify and delete existing ones",
+    seal: "prevents the object from having new properties or being deleted, allowing only existing ones to be changed",
+    freeze: "prevents you from adding, modifying or deleting any property of the object"
+}
+console.table(descriptionPrevExtSealFreeze)
+const ex1 = {
+    name: "theozera"
+}
+// preventExtensions
+console.log(Object.isExtensible(ex1))
+Object.preventExtensions(ex1)
+console.log(Object.isExtensible(ex1))
