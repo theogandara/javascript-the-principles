@@ -34,7 +34,6 @@ console.table({
 
 // operations
 const [numberPositive, numberNegative, numberDecimal] = [56, -54, 78.89]
-
 const convertToPositiveSign = Math.abs(numberNegative)
 const arroundToUp = Math.ceil(numberDecimal)
 const arroundToDown = Math.floor(numberDecimal)
@@ -48,4 +47,12 @@ console.table({
     arround_ToUp5_9__ToDown0_4,
     return_1ToPositiveAndMinesOneToNegative,
     deleteDecimalPart
+})
+
+const mArray = [1, 2, 3, -4, 5, 6, 7, 8, 9]
+const max = Math.max(...mArray)
+const min = Math.min(...mArray)
+const random = Math.random()
+console.table({
+    min, max, random
 })
