@@ -11,3 +11,9 @@ console.log(octalOf42);
 // hexadecimal representations - 0x 0X
 const hexaOf255 = 0xFF;
 console.log(hexaOf255);
+
+// Number conversion
+console.log(Number("0xFF"))
+console.log(Number("0b1110"))
+console.log(Number("0o10"))
+console.log(Number("NotANumber"))
