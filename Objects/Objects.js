@@ -80,3 +80,17 @@ const userInfos = {
 Object.assign(userInfos, userContact, userAddress)
 console.log(userInfos)
 
+// object keys, values, entries
+const product = {
+    price: 1100,
+    quantity: 76,
+    name: "Iphone 15"
+}
+const productKeys = Object.keys(product)
+const productValues = Object.values(product)
+const productEntries = Object.entries(product)
+console.log(product)
+console.log(productKeys)
+console.log(productValues)
+console.log(productEntries)
+
