@@ -94,3 +94,24 @@ console.log(productKeys)
 console.log(productValues)
 console.log(productEntries)
 
+// object - defineProperty
+const example = {}
+Object.defineProperty(example, "name", {
+    value: "woooooow"
+})
+// why the property name doesnt appear here ?
+console.log(example)
+// when we define only the value, everything else is considered false
+const definePropertiesConfigs = {
+    configurable: "property can be deleted",
+    enumerable: "property can be enumerated",
+    writable: "property can be modified",
+    value: "obviosly define the property value"
+}
+console.table(definePropertiesConfigs)
+// enuerate now
+Object.defineProperty(example, "age", {
+    value: 22,
+    enumerable: true
+})
+console.log(example)
