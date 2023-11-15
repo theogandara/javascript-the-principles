@@ -77,5 +77,6 @@ const userContact = {
 const userInfos = {
     age: 25
 }
-const userComplete = Object.assign(userAddress, userContact, userInfos)
+const userComplete = Object.assign(userInfos, userContact, userAddress)
 console.log(userComplete)
+
