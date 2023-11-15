@@ -1,5 +1,5 @@
 // create objects
-{};
+{ };
 new Object();
 Object.create(null);
 
@@ -29,15 +29,31 @@ const { title, author } = book;
 
 // object comparing - algorithm
 let equal = true;
-for (let key in book){
-    if (book[key] !== book2[key]){
+for (let key in book) {
+    if (book[key] !== book2[key]) {
         equal = false;
     }
 }
-for (let key in book2){
-    if (book2[key] !== book[key]){
+for (let key in book2) {
+    if (book2[key] !== book[key]) {
         equal = false;
     }
 }
 console.log(equal);
 
+// inheritance
+const functionalLanguage = {
+    paradigm: 'functional'
+}
+// using inheritance to reuse properties, defining a common prototype
+const javascript = {
+    creator: "theo gandara",
+    __proto__: functionalLanguage
+}
+const elixir = {
+    creator: "theo pedicino",
+    __proto__: functionalLanguage
+}
+console.log(javascript)
+// the paradigm property won't be present in the log, because it doesn't belong to the prototype of the objects it was inherited from, but if we try to access this property it will be there.
+console.log(javascript.paradigm)
