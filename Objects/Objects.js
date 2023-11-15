@@ -66,3 +66,16 @@ Object.setPrototypeOf(tgLanguage, functionalLanguage)
 console.log(Object.getPrototypeOf(tgLanguage))
 // likewise, it happens here, the property is of your prototype and not directly yours
 console.log(tgLanguage.hasOwnProperty("paradigm"))
+
+// object assign
+const userAddress = {
+    street: "Av Roses"
+}
+const userContact = {
+    phone: "123 123 123"
+}
+const userInfos = {
+    age: 25
+}
+const userComplete = Object.assign(userAddress, userContact, userInfos)
+console.log(userComplete)
